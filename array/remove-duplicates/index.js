@@ -2,8 +2,6 @@
 //Input  : arr[] = {1, 2, 2, 3, 4, 4, 4, 5, 5}
 //Output : arr[] = {1, 2, 3, 4, 5}
 
-let arr = [1, 2, 2, 3, 4, 4, 4, 5, 5];
-
 const removeDuplicates = (arr, n) => {
     //Return if array is empty or contains only single element
     if(n == 0 || n == 1) {
@@ -26,12 +24,14 @@ const removeDuplicates = (arr, n) => {
     for(let i=0; i < j; i++) {
         arr[i] = temp[i];
     }
-
     return j;
 }
-
-let n = arr.length;   
-n = removeDuplicates(arr, n);
-for(let i = 0; i < n; i++) {
-    console.log(arr[i]+' ');
+const main = () => {
+    let arr = [1, 2, 2, 3, 4, 4, 4, 5, 5];
+    let n = arr.length;   
+    n = removeDuplicates(arr, n);
+    for(let i = 0; i < n; i++) {
+        console.log(arr[i]+' ');
+    }
 }
+main();
